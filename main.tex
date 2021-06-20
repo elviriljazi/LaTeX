@@ -1,0 +1,455 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{enumitem}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage[top=1.5cm, bottom=2cm, left=1cm, right=1cm] {geometry}
+\title{Detyra Algjeber Lineare}
+\author{Elvir Iljazi}
+\date{May 2021}
+
+\begin{document}
+
+\maketitle
+\subsection*{Detyra 1}
+Le të jetë $F$ - Bashkësia e Figurave gjeometrike (planimaetrike) dhe shumës së tyre. Shqyrto nëse (A, $\oplus$) formon grup Abelian ku $\oplus$ mbledhja e zakonshme.\par
+\begin{enumerate}
+    \item Mbyllt;sia\\
+          $\forall$ \includegraphics[scale=.012]{circle.png}, \includegraphics[scale=.012]{square.png} $\in F$ vlen:\\
+          \includegraphics[scale=.012]{circle.png} $\oplus$ \includegraphics[scale=.012]{square.png} = \includegraphics[scale=.012]{circle.png} + \includegraphics[scale=.012]{square.png} $\in F$
+    \item Vetia asociative\\
+          $\forall$\includegraphics[scale=.012]{circle.png}, \includegraphics[scale=.012]{square.png}, \includegraphics[scale=.012]{triangle.png} $\in F$ vlen:\\
+          \includegraphics[scale=.012]{circle.png}$\oplus$(\includegraphics[scale=.012]{square.png}$\oplus$\includegraphics[scale=.012]{triangle.png})=(\includegraphics[scale=.012]{circle.png}$\oplus$\includegraphics[scale=.012]{square.png})$\oplus$\includegraphics[scale=.012]{triangle.png}\\
+          \includegraphics[scale=.012]{circle.png}+(\includegraphics[scale=.012]{square.png}+\includegraphics[scale=.012]{triangle.png})=(\includegraphics[scale=.012]{circle.png}+\includegraphics[scale=.012]{square.png})+\includegraphics[scale=.012]{triangle.png}\\
+          \includegraphics[scale=.012]{circle.png}+\includegraphics[scale=.012]{square.png}+\includegraphics[scale=.012]{triangle.png}=\includegraphics[scale=.012]{circle.png}+\includegraphics[scale=.012]{square.png}+\includegraphics[scale=.012]{triangle.png}\\
+    \item Elementi neutral\\
+          $\exists0 \in$F,$\forall$\includegraphics[scale=.012]{circle.png} $\in$F vlen:\\
+          \includegraphics[scale=.012]{circle.png}$\oplus0=0\oplus$\includegraphics[scale=.012]{circle.png}=\includegraphics[scale=.012]{circle.png}\\
+          \includegraphics[scale=.012]{circle.png}+0=0+\includegraphics[scale=.012]{circle.png}=\includegraphics[scale=.012]{circle.png}\\
+    \item Elementi i kundërt\\
+          $\forall$\includegraphics[scale=.012]{circle.png} $\in F$ dhe $0 \in$F,$\exists$ \includegraphics[scale=.012]{circle.png}$^{-1}$ ashtu q;:\\
+          \includegraphics[scale=.012]{circle.png}$\oplus$\includegraphics[scale=.012]{circle.png}$^{-1}$=\includegraphics[scale=.012]{circle.png}$^{-1}\oplus$\includegraphics[scale=.012]{circle.png}=0\\
+          \includegraphics[scale=.012]{circle.png}+\includegraphics[scale=.012]{circle.png}$^{-1}$=0 $\implies$\includegraphics[scale=.012]{circle.png}$^{-1}$=-\includegraphics[scale=.012]{circle.png}\\
+    \item Vetia komutatove\\
+          $\forall$\includegraphics[scale=.012]{circle.png},\includegraphics[scale=.012]{square.png}$\in$F vlen:\\
+          \includegraphics[scale=.012]{circle.png}$\oplus$\includegraphics[scale=.012]{square.png}=\includegraphics[scale=.012]{square.png}$\oplus$\includegraphics[scale=.012]{circle.png}\\
+          \includegraphics[scale=.012]{circle.png}$+$\includegraphics[scale=.012]{square.png}=\includegraphics[scale=.012]{square.png}$+$\includegraphics[scale=.012]{circle.png}\\
+\end{enumerate}\vfill
+\subsection*{Detyra 2}
+Te kryhen veprimet me matrica.\par
+
+$A=\left(\begin{matrix}
+            1  & 4  & 5  & -2 \\
+            1  & -2 & -4 & 5  \\
+            10 & 1  & 0  & 4
+        \end{matrix}\right)$
+$B=\left(\begin{matrix}
+            -4 & 6  & -7 & 4 \\
+            1  & 2  & 0  & 1 \\
+            4  & -5 & 6  & 7 \\
+            0  & 0  & 1  & 2
+        \end{matrix}\right)$
+$C=\left(\begin{matrix}
+            0 & 1  & 2  & 3  \\
+            5 & 0  & 2  & 4  \\
+            2 & -5 & 3  & 2  \\
+            1 & 5  & 11 & 42
+        \end{matrix}\right)$\par
+
+\begin{enumerate}[label=\alph*)]
+    \item A+2B
+    \item A-5C
+    \item $A\cdot B^T$
+    \item $A^{-1} \cdot B$
+\end{enumerate}
+Zgjidhje\par\par
+\begin{enumerate}[label=\alph*)]
+    \item
+          $A+2B=\left(\begin{matrix}
+                  1  & 4  & 5  & -2 \\
+                  5  & 6  & 1  & 0  \\
+                  1  & -2 & -4 & 5  \\
+                  10 & 1  & 0  & 4
+              \end{matrix}\right)$
+          +
+          $2\left(\begin{matrix}
+                  -4 & 6  & -7 & 4 \\
+                  1  & 2  & 0  & 1 \\
+                  4  & -5 & 6  & 7 \\
+                  0  & 0  & 1  & 2
+              \end{matrix}\right)$
+          =
+          $\left(\begin{matrix}
+                  1  & 4  & 5  & -2 \\
+                  5  & 6  & 1  & 0  \\
+                  1  & -2 & -4 & 5  \\
+                  10 & 1  & 0  & 4
+              \end{matrix}\right)$
+          +
+          $\left(\begin{matrix}
+                  -8 & 12 & -14 & 8 \\
+                  2  & 4  & 0   & 2 \\
+                  0  & 0  & 2   & 4
+              \end{matrix}\right)$
+          =
+          $\left(\begin{matrix}
+                  1+\left(-8\right) & 4+12                & 5+\left(-14\right) & -2+8 \\
+                  5+2               & 6+4                 & 1+0                & 0+2  \\
+                  1+8               & -2+\left(-10\right) & -4+12              & 5+14 \\
+                  10+0              & 1+0                 & 0+2                & 4+4
+              \end{matrix}\right)$
+          =
+          $\left(\begin{matrix}
+                  -7 & 16  & -9 & 6  \\
+                  7  & 10  & 1  & 2  \\
+                  9  & -12 & 8  & 19 \\
+                  10 & 1   & 2  & 8
+              \end{matrix}\right)$
+    \item
+          $A-5C=\left(\begin{matrix}
+                  1  & 4  & 5  & -2 \\
+                  5  & 6  & 1  & 0  \\
+                  1  & -2 & -4 & 5  \\
+                  10 & 1  & 0  & 4
+              \end{matrix}\right)$
+          -
+          $5\left(\begin{matrix}
+                  0 & 1  & 2  & 3  \\
+                  5 & 0  & 2  & 4  \\
+                  2 & -5 & 3  & 2  \\
+                  1 & 5  & 11 & 42
+              \end{matrix}\right)$
+          =
+          $\left(\begin{matrix}
+                  1  & 4  & 5  & -2 \\
+                  5  & 6  & 1  & 0  \\
+                  1  & -2 & -4 & 5  \\
+                  10 & 1  & 0  & 4
+              \end{matrix}\right)$
+          -
+          $\left(\begin{matrix}
+                  0  & 5   & 10 & 15  \\
+                  25 & 0   & 10 & 20  \\
+                  10 & -25 & 15 & 10  \\
+                  5  & 25  & 55 & 210
+              \end{matrix}\right)$
+          =
+          $\left(\begin{matrix}
+                  1-0   & 4- 5     & 5- 10  & -2- 15 \\
+                  5- 25 & 6-0      & 1- 10  & 0- 20  \\
+                  1- 10 & -2-(-25) & -4- 15 & 5- 10  \\
+                  10- 5 & 1- 25    & 0- 55  & 4- 210
+              \end{matrix}\right)$
+          =
+          $\left(\begin{matrix}
+                  1   & -1  & -5  & -17  \\
+                  -20 & 6   & -9  & -20  \\
+                  -9  & 23  & -19 & -5   \\
+                  5   & -24 & -55 & -206
+              \end{matrix}\right)$\vfill
+    \item Zgjidhje\par
+          \includegraphics[scale=.5]{inverse.png}
+          $A^{-1}=\left(\begin{matrix}
+                  1 & 5 & 8 & 5  \\
+                  0 & 1 & 4 & 4  \\
+                  1 & 5 & 9 & 10 \\
+                  1 & 4 & 5 & 7
+              \end{matrix}\right)^{-1}
+              =
+              \left(\begin{matrix}
+                      -11 & -50 & 57  & -45 \\
+                      4   & 17  & -20 & 16  \\
+                      -1  & -5  & 6   & -5  \\
+                      0   & 1   & -1  & 1
+                  \end{matrix}\right)$\par
+          $A^{-1}\cdot B=\left(\begin{matrix}
+                      -11 & -50 & 57  & -45 \\
+                      4   & 17  & -20 & 16  \\
+                      -1  & -5  & 6   & -5  \\
+                      0   & 1   & -1  & 1
+                  \end{matrix}\right)
+              \times
+              \left(\begin{matrix}
+                      2 & 1 & 2  & 3  \\
+                      1 & 1 & 5  & 4  \\
+                      1 & 2 & 3  & 4  \\
+                      2 & 4 & -2 & -4
+                  \end{matrix}\right)=$\par
+          $\left(\begin{matrix}
+                      -11\cdot 2+\left(-50\right)\cdot 1+57\cdot 1+\left(-45\right)\cdot 2 & -11\cdot 1+\left(-50\right)\cdot 1+57\cdot 2+\left(-45\right)\cdot 4 & -11\cdot 2+\left(-50\right)\cdot 5+57\cdot 3+\left(-45\right)\cdot \left(-2\right) & -11\cdot 3+\left(-50\right)\cdot 4+57\cdot 4+\left(-45\right)\cdot \left(-4\right) \\
+                      4\cdot 2+17\cdot 1+\left(-20\right)\cdot 1+16\cdot 2                 & 4\cdot 1+17\cdot 1+\left(-20\right)\cdot 2+16\cdot 4                 & 4\cdot 2+17\cdot 5+\left(-20\right)\cdot 3+16\cdot \left(-2\right)                 & 4\cdot 3+17\cdot 4+\left(-20\right)\cdot 4+16\cdot \left(-4\right)                 \\
+                      -1\cdot 2+\left(-5\right)\cdot 1+6\cdot 1+\left(-5\right)\cdot 2     & -1\cdot 1+\left(-5\right)\cdot 1+6\cdot 2+\left(-5\right)\cdot 4     & -1\cdot 2+\left(-5\right)\cdot 5+6\cdot 3+\left(-5\right)\cdot \left(-2\right)     & -1\cdot 3+\left(-5\right)\cdot 4+6\cdot 4+\left(-5\right)\cdot \left(-4\right)     \\
+                      0\cdot 2+1\cdot 1+\left(-1\right)\cdot 1+1\cdot 2                    & 0\cdot 1+1\cdot 1+\left(-1\right)\cdot 2+1\cdot 4                    & 0\cdot 2+1\cdot 5+\left(-1\right)\cdot 3+1\cdot \left(-2\right)                    & 0\cdot 3+1\cdot 4+\left(-1\right)\cdot 4+1\cdot \left(-4\right)
+                  \end{matrix}\right)$\par
+          $=\left(\begin{matrix}
+                      -105 & -127 & -11 & 175 \\
+                      37   & 45   & 1   & -64 \\
+                      -11  & -14  & 1   & 21  \\
+                      2    & 3    & 0   & -4
+                  \end{matrix}\right)$\vfill
+    \item $A \cdot B^T
+              =
+              \left(\begin{matrix}
+                  1 & 5 & 8 & 5  \\
+                  0 & 1 & 4 & 4  \\
+                  1 & 5 & 9 & 10 \\
+                  1 & 4 & 5 & 7
+              \end{matrix}\right)
+              \times
+              \left(\begin{matrix}
+                  2 & 1 & 2  & 3  \\
+                  1 & 1 & 5  & 4  \\
+                  1 & 2 & 3  & 4  \\
+                  2 & 4 & -2 & -4
+              \end{matrix}\right)^T
+              =$\par
+          $\left(\begin{matrix}
+                  1\cdot 2+5\cdot 1+8\cdot 2+5\cdot 3  & 1\cdot 1+5\cdot 1+8\cdot 5+5\cdot 4  & 1\cdot 1+5\cdot 2+8\cdot 3+5\cdot 4  & 1\cdot 2+5\cdot 4+8\cdot \left(-2\right)+5\cdot \left(-4\right)  \\
+                  0\cdot 2+1\cdot 1+4\cdot 2+4\cdot 3  & 0\cdot 1+1\cdot 1+4\cdot 5+4\cdot 4  & 0\cdot 1+1\cdot 2+4\cdot 3+4\cdot 4  & 0\cdot 2+1\cdot 4+4\cdot \left(-2\right)+4\cdot \left(-4\right)  \\
+                  1\cdot 2+5\cdot 1+9\cdot 2+10\cdot 3 & 1\cdot 1+5\cdot 1+9\cdot 5+10\cdot 4 & 1\cdot 1+5\cdot 2+9\cdot 3+10\cdot 4 & 1\cdot 2+5\cdot 4+9\cdot \left(-2\right)+10\cdot \left(-4\right) \\
+                  1\cdot 2+4\cdot 1+5\cdot 2+7\cdot 3  & 1\cdot 1+4\cdot 1+5\cdot 5+7\cdot 4  & 1\cdot 1+4\cdot 2+5\cdot 3+7\cdot 4  & 1\cdot 2+4\cdot 4+5\cdot \left(-2\right)+7\cdot \left(-4\right)
+              \end{matrix}\right)$\par
+          $=\left(\begin{matrix}
+                  38 & 66 & 55 & -14 \\
+                  21 & 37 & 30 & -20 \\
+                  55 & 91 & 78 & -36 \\
+                  37 & 58 & 52 & -20
+              \end{matrix}\right)$
+\end{enumerate}
+\subsection*{Detyra 3}
+
+\begin{enumerate}
+    \item Te shqyrtohen zgjidhet e sistemit ne varsi te parametrave $\lambda$ dhe $\mu$ me metoden e Kronecker-Capell-it dhe te gjenden zgjidhjet e tij me metoden e Gauss-it:\par
+
+          $\begin{cases}
+                  \begin{matrix}
+                      2x + 4y -2z + 2u + v            & = & \mu \\
+                      2\lambda x +8y -4z + 4u + 2v    & = & 0   \\
+                      -2x -4y + 2z - \lambda u -v     & = & 0   \\
+                      -8x - 8\lambda y + 8z - 8u - 4v & = & \mu \\
+                      2x + 4y -\lambda z +2u + v      & = & 0
+                  \end{matrix}
+              \end{cases}$\\
+          Forma matricore e Sistemit:\\
+          $\left(\begin{matrix}
+                      2        & 4         & -2       & 2        & 1  & | & \mu \\
+                      2\lambda & 8         & -4       & 4        & 2  & | & 0   \\
+                      -2       & -4        & 2        & -\lambda & -1 & | & 0   \\
+                      -8       & -8\lambda & 8        & -8       & -4 & | & \mu \\
+                      2        & 4         & -\lambda & 2        & 1  & | & 0
+                  \end{matrix}\right)$\\
+
+          $i$ - numri i rreshtave (ekuacioneve),\\
+          $j$ - numri i kolonave (ndryshoreve)\\
+          $r$ - rangu i matrices\\
+          $n = j - r$ - numri i ndryshoreve te lira\\
+          Zgjidhje\par
+          \includegraphics[scale=.55]{foto1.png}
+          Per $\lambda \neq$ 2 kemi \\
+          \includegraphics[scale=.55]{foto2.png}\\
+          $rang(A)=rang(A|B)=j=5$ - Sistemi ka zgjidhje te vetme.\\
+          $\begin{cases}
+                  \begin{matrix}
+                      x  = \frac{-\mu}{\lambda -2}   \\
+                      y  = \frac{-5\mu}{8\lambda-16} \\
+                      z  =  \frac{\mu}{\lambda -2}   \\
+                      u  =  \frac{-\mu}{\lambda -2}  \\
+                      v  =  \frac{2\lambda \mu +13\mu}{2\lambda-4}
+                  \end{matrix}
+              \end{cases}$
+          E provojm per $\lambda =1$ kemi
+          $\begin{cases}
+                  \begin{matrix}
+                      x  = 0 \\
+                      y  = 0 \\
+                      z  = 0 \\
+                      u  = 0 \\
+                      v  = 0
+                  \end{matrix}
+              \end{cases}$
+          \\    \begin{enumerate}
+              \item Per $\lambda=2$ dhe $\mu \neq 0$ kemi:\\
+                    $\left(\begin{matrix}
+                            2 & 4 & -2 & 2 & 1 & | & \mu         \\
+                            0 & 0 & 0  & 0 & 0 & | & -\lambda\mu \\
+                            0 & 0 & 0  & 0 & 0 & | & \mu         \\
+                            0 & 0 & 0  & 0 & 0 & | & 5\mu        \\
+                            0 & 0 & 0  & 0 & 0 & | & -\mu
+                        \end{matrix}\right)$\\
+                    $rang(A)<rang(A|B)$ - Sistemi eshte i pamundshem!\vfill
+              \item Per $\lambda=2$ dhe $\mu =0$ kemi:\\
+                    $\left(\begin{matrix}
+                            2 & 4 & -2 & 2 & 1 & | & 0 \\
+                            0 & 0 & 0  & 0 & 0 & | & 0 \\
+                            0 & 0 & 0  & 0 & 0 & | & 0 \\
+                            0 & 0 & 0  & 0 & 0 & | & 0 \\
+                            0 & 0 & 0  & 0 & 0 & | & 0
+                        \end{matrix}\right)$\\
+                    $i=5, j=5,r= rang(A)=1$
+                    $rang(A)=rang(A|B)<j\\
+                        n=j-r = 5-1 = 4$ - Sistemi ka pakufi shume zgjidhje dhe 4 ndryshore te lira.
+          \end{enumerate}
+
+
+
+
+
+
+    \item Te gjenden zgjidhjet fundamentale te Sistemit per $\lambda=2$ dhe $\mu = 2$\\
+          Zgjidhje:\\
+          er $\lambda=2$ dhe $\mu =0$ kemi:\\
+          $\left(\begin{matrix}
+                      2 & 4 & -2 & 2 & 1 & | & 0 \\
+                      0 & 0 & 0  & 0 & 0 & | & 0 \\
+                      0 & 0 & 0  & 0 & 0 & | & 0 \\
+                      0 & 0 & 0  & 0 & 0 & | & 0 \\
+                      0 & 0 & 0  & 0 & 0 & | & 0
+                  \end{matrix}\right)$\\
+          $i=5, j=5,r= rang(A)=1$
+          $rang(A)=rang(A|B)<j\\
+              n=j-r = 5-1 = 4$ - Sistemi ka pakufi shume zgjidhje dhe 4 ndryshore te lira.\\
+          Marrim kater ndryshore te lira duke i perdorur vlerat e tyre nga matrica njesi e rendit te katert per te gjetur zgjidhjen fundamentale.\\
+          $\left(\begin{matrix}
+                  1 & 0 & 0 & 0 \\
+                  0 & 1 & 0 & 0 \\
+                  0 & 0 & 1 & 0 \\
+                  0 & 0 & 0 & 1
+              \end{matrix}\right)_{4\times4}$
+          dhe i zevendsojm ne ekuacionin $2x+4y-2z+2u+v=0 \implies x=-2y+z+u+\frac{v}{2}$\\
+
+          Per  y = 1 , z,u,v = 0;\\
+          $L_1=(-2,1,0,0,0)^T$\\
+          Per  z = 1 , y,u,v = 0;\\
+          $L_2=(1,0,1,0,0)^T$\\
+          Per  u = 1 , y,z,v = 0;\\
+          $L_3=(-1,0,0,1,0)^T$\\
+          Per  v = 1 , y,z,u = 0;\\
+          $L_4=(-\frac{1}{2},0,0,0,1)^T$\\
+          Zgjidhja e pergjithshme fundamentale:\\
+          $X=\alpha L_1 + \beta L_2 + \gamma L_3 + \delta L_4$\\
+          \large X=$(-2\alpha + \beta - \gamma  - \frac{\delta}{2},\alpha,\beta,\gamma,\delta)^T$\\
+          Zgjidhja e vecant fundamentale:\\
+          Per $\alpha,\beta,\gamma = 1$ dhe $\delta=2$ kemi:\\
+          \Large X=(-3,1,1,2)$^T$
+
+\end{enumerate}
+\subsection*{Detyra 4}
+Le të jetë $X_A=(1,2,3,4)$ dhe bazat $ A^T=\{(2,-1,0,1),(-1,2,1,-1),(1,0,1,2),(4,2,0,1)\}$,\\ $B=\{(0,1,-1,1)^T,(-2,-2,-1,1)^T,(1,2,-1,1)^T,(2,3,1,-2)^T\}$. Gjeni koordinatat e vektorit ne bazën $B$.\\
+Zgjidhje:\\
+$X_A \cdot A = X_B \cdot B$  $| B^{-1}$\\
+$X_A\cdot A \cdot B^{-1}=X_B$\\
+A=$\left(\begin{matrix}
+            1  & -1 & 0 & 1  \\
+            -1 & 2  & 1 & -1 \\
+            1  & 0  & 1 & 2  \\
+            4  & 2  & 0 & 1
+        \end{matrix}\right)$
+B=$\left(\begin{matrix}
+            0  & -2 & 1  & 2  \\
+            1  & -2 & 2  & 3  \\
+            -1 & -1 & -1 & 1  \\
+            1  & 1  & 1  & -2
+        \end{matrix}\right)$\\
+\includegraphics[scale=.5]{inverse2.png}\\
+$(1,2,3,4)\cdot\left(\begin{matrix}
+            1  & -1 & 0 & 1  \\
+            -1 & 2  & 1 & -1 \\
+            1  & 0  & 1 & 2  \\
+            4  & 2  & 0 & 1
+        \end{matrix}\right)\cdot\left(\begin{matrix}
+            -4 & 3  & 5  & 3  \\
+            1  & -1 & -3 & -2 \\
+            3  & -2 & -4 & -2 \\
+            0  & 0  & -1 & -1
+        \end{matrix}\right)=(1,2,3,4)\cdot\left(\begin{matrix}
+            -5  & 4  & 7   & 4  \\
+            9   & -7 & -14 & -8 \\
+            -1  & 1  & -1  & -1 \\
+            -14 & 10 & 13  & 7
+        \end{matrix}\right)=\left(\begin{matrix}
+            -46 & 33 & 28 & 13
+        \end{matrix}\right)$\\\\
+$\Large X_B=\left(\begin{matrix}
+            -46 & 33 & 28 & 13
+        \end{matrix}\right)$
+\subsection*{Detyra 5}
+Është dhënë matrica A, Gjeni ekuacionin karakteristik, vlerat vetjake, spektrin dhe vektorët vetjak\\
+$A=\left(\begin{matrix}
+            2 & 0 & 0 & 0 \\
+            1 & 2 & 0 & 1 \\
+            1 & 0 & 2 & 1 \\
+            1 & 0 & 1 & 2
+        \end{matrix}\right)$.\\
+$|A-\lambda E|=\left|\begin{matrix}
+        2-\lambda & 0         & 0         & 0         \\
+        1         & 2-\lambda & 0         & 1         \\
+        1         & 0         & 2-\lambda & 1         \\
+        1         & 0         & 1         & 2-\lambda
+    \end{matrix}\right|=
+    \lambda^4-8\lambda^3+23\lambda^2-28\lambda+12=(\lambda-1)\cdot(\lambda^3-7\lambda^2+16\lambda-12)=(\lambda-1)\cdot(\lambda-3)\cdot(\lambda^2-4\lambda+4)=(\lambda-1)\cdot(\lambda-3)\cdot(\lambda-2)^2=0\\
+    \lambda_1=1, \lambda_2=3, \lambda_3=\lambda_4=2$ - Vlerat vetjake.\\
+$S=\{1,2,2,3\}$ - Spektri vlerave vetjake.\\
+Për te gjetur vektoret  vetjak zgjedhim barazimin:\\
+$(A-\lambda E)\cdot X =0 \implies A\cdot X = \lambda X$\\
+Nga barazimi me siper kemi:
+$\begin{cases}
+        \begin{matrix}
+            (2-\lambda)x         & = & 0 \\
+            x +(2-\lambda)y + u  & = & 0 \\
+            x + (2-\lambda)z + u & = & 0 \\
+            x + z + (2-\lambda)u & = & 0
+        \end{matrix}
+    \end{cases}$\\
+Për $\lambda=1$ kemi:\\
+$\begin{cases}
+        \begin{matrix}
+            x         & = & 0 \\
+            x +y + u  & = & 0 \\
+            x + z + u & = & 0 \\
+            x + z + u & = & 0
+        \end{matrix}
+    \end{cases}\implies
+    \begin{cases}
+        \begin{matrix}
+            x & = & 0  \\
+            y & = & -t \\
+            z & = & -t \\
+            u & = & t
+        \end{matrix}
+    \end{cases}, t\neq0\implies L=t(0,-1,-1,1)^T$\\
+Për $\lambda=2$ kemi:\\
+$\begin{cases}
+        \begin{matrix}
+            x + u & = & 0 \\
+            x + u & = & 0 \\
+            x + z & = & 0
+        \end{matrix}
+    \end{cases}\implies
+    \begin{cases}
+        \begin{matrix}
+            x & = & t  \\
+            y & = & t  \\
+            z & = & -t \\
+            u & = & -t
+        \end{matrix}
+    \end{cases}, t\neq0\implies L=t(1,1,-1,-1)^T$\\
+Për $\lambda=3$ kemi:\\
+$\begin{cases}
+        \begin{matrix}
+            -x        & = & 0 \\
+            x - y + u & = & 0 \\
+            x - z + u & = & 0 \\
+            x + z - u & = & 0
+        \end{matrix}
+    \end{cases}\implies
+    \begin{cases}
+        \begin{matrix}
+            x & = & 0 \\
+            y & = & t \\
+            z & = & t \\
+            u & = & t
+        \end{matrix}
+    \end{cases}, t\neq0\implies L=t(0,1,1,1)^T$
+
+\end{document}
