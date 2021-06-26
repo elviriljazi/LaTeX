@@ -1,0 +1,61 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[macedonian]{babel}
+\usepackage{multicol}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\setlength{\parindent}{1em}
+\setlength{\parskip}{0.5em}
+\renewcommand{\baselinestretch}{1.5}
+
+\begin{document}
+
+\begin{center}
+  \section{Неопределен интеграл}
+  \subsection{Примитивна функција. Неопределен интеграл }
+\end{center}
+\par
+\textbf{Примитивна функција} за дадена функција $f(x), x\in \subseteq \mathbb{R} $ е диференцијабилната функција $F(x), x \in E \subseteq \mathbb{R}$ таква што $F'(x)=f(x)$, за секој $x \in E$.
+\par
+\textbf{Неоределен интеграл} за дадена функција $f(x), x\in E \subseteq \mathbb{R} $ со ознака $\int f(x)dx$ е
+множеството од сите примитвни функции, т.е.
+\par
+$\int f(x)dx = \lbrace F(x)+C | F'(x)=f(x),\forall x \in \mathbb{R} \rbrace$.
+\par Вообичаено ознаката за множество ја изоставуваме, т.е. ако $F(x)$ е една
+примитивна функцијата за $f(x)$ , тогаш пишуваме $\int f(x)dx = F(x)+C,C\in\mathbb{R}$.
+\par Својства на неоределен интеграл:
+\begin{enumerate}
+  \item $\int \alpha f(x)dx =\alpha\int f(x)dx,\alpha\in\mathbb{R}$
+  \item $\int (f(x) +g(x))dx =\int f(x)dx+\int g(x)dx$,
+  \item $\int F'(x)dx=F(x)+C$.
+\end{enumerate}
+Таблица на неопределени интеграли на некои елементарни фунции:
+\par
+\begin{multicols}{2}
+  \begin{enumerate}
+    \item $\int x^\alpha dx = \frac{x^{\alpha +1}}{\alpha+1}.$
+    \item $\int \frac{dx}{x}=\ln |x|+C.$
+    \item $\int e^x=e^x + C.$
+    \item $\int a^x dx = \frac{a^x}{\ln a}+C, a>0,a\neq 1.$
+    \item $\int \sin xdx=-\cos x+C.$
+    \item $\int \cos xdx=\sin x+C.$
+    \item $\int \frac{dx}{\cos^2 x} = \tg x+C.$
+    \item $\int \frac{dx}{\sin^2 x}=-\ctg x+C.$
+    \item $\int \frac{dx}{\sqrt{1-x^2}}=\arcsin x+C.$
+    \item $\int \frac{dx}{\sqrt{1+x^2}}=\arctg x+C.$
+    \item $\int \frac{dx}{x^2 + 1}=\ln |x+\sqrt{x^2 + 1}|+C.$
+    \item $\int \frac{dx}{x^2 - 1}=\ln |x+\sqrt{x^2 - 1}|+C.$
+  \end{enumerate}
+\end{multicols}
+\begin{enumerate}[label=1.\arabic*]
+  \item Најди една примитивна функција $\varphi$ на функција $f$, ако $f(x)=\cos x$.\par
+        \textbf{Решение.} Треба да најдеме барем една функција чиј што извод е дадената функција. Бидејќи $(\sin x)'=\cos x$  заклучуваме дека $\varphi (x) =\sin x$ е една примитивна функција на дадената функција
+  \item Најди сите функци $f$, за која важи $f'(x)=1+e^x$.
+        \par  \textbf{Решение.}
+\end{enumerate}
+\end{document}
+
